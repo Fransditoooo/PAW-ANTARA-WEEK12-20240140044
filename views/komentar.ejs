@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Komentar Produk Aman</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #1f2937;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .header {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .form-card,
+    .comment-card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 7px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 18px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    .error {
+      background: #fee2e2;
+      color: #991b1b;
+      padding: 12px 15px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .comment-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .comment-text {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .date {
+      color: #6b7280;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 15px;
+      text-decoration: none;
+      color: #2563eb;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="header">
+
+      <h1>💬 Komentar Produk Aman</h1>
+
+      <p>
+        Selamat datang,
+        <strong><%= username %></strong>
+      </p>
+
+      <p>
+        Halaman ini dibuat untuk demonstrasi validasi,
+        sanitasi, parameterized query, dan escaping output.
+      </p>
+
+    </div>
+
+
+    <div class="form-card">
+
+      <h2>Tambah Komentar</h2>
+
+      <% if (errors && errors.length > 0) { %>
+
+        <% errors.forEach(function(error) { %>
+
+          <div class="error">
+            ❌ <%= error %>
+          </div>
+
+        <% }); %>
+
+      <% } %>
+
+
+      <form
+        method="POST"
+        action="/komentar"
+      >
+
+        <label for="name">
+          Nama
+        </label>
+
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value="<%= old.name %>"
+          maxlength="50"
+          placeholder="Masukkan nama"
+        >
+
+
+        <label for="text">
+          Komentar
+        </label>
+
+        <textarea
+          id="text"
+          name="text"
+          maxlength="500"
+          placeholder="Tulis komentar minimal 5 karakter"
+        ><%= old.text %></textarea>
+
+
+        <button type="submit">
+          Kirim Komentar
+        </button>
+
+      </form>
+
+    </div>
+
+
+    <div>
+
+      <h2>Daftar Komentar</h2>
+
+      <% if (!comments || comments.length === 0) { %>
+
+        <div class="comment-card">
+          Belum ada komentar.
+        </div>
+
+      <% } %>
+
+
+      <% comments.forEach(function(comment) { %>
+
+        <div class="comment-card">
+
+          <div class="comment-name">
+            <%= comment.name %>
+          </div>
+
+          <div class="date">
+            <%= new Date(comment.createdAt).toLocaleString('id-ID') %>
+          </div>
+
+          <div class="comment-text">
+            <%= comment.text %>
+          </div>
+
+        </div>
+
+      <% }); %>
+
+    </div>
+
+
+    <a
+      class="back"
+      href="/demo"
+    >
+      ← Kembali ke Demo Keamanan
+    </a>
+
+  </div>
+
+</body>
+
+</html>
