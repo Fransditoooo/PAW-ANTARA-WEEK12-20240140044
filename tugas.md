@@ -17,7 +17,7 @@
 
 ### Screenshot
 
-> **[MASUKKAN SCREENSHOT SQL INJECTION DI SINI]**
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b8b75ddd-0866-49c1-8fb6-6b22fae734a1" />
 
 ### Penjelasan
 
@@ -45,7 +45,8 @@ Input pengguna seharusnya tidak dimasukkan langsung ke dalam query seperti terse
 
 ### Screenshot
 
-> **[MASUKKAN SCREENSHOT XSS REFLECTED DI SINI]**
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/975dba36-1077-4878-b7bd-d95364f2bd6e" />
+
 
 ### Penjelasan
 
@@ -73,7 +74,8 @@ Input pengguna seharusnya di-escape sebelum ditampilkan kembali kepada browser.
 
 ### Screenshot
 
-> **[MASUKKAN SCREENSHOT XSS STORED DI SINI]**
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a0f9c0ca-2cc9-44e1-b159-7e43ff3ba80e" />
+
 
 ### Penjelasan
 
@@ -101,7 +103,7 @@ Tag `<%- %>` membuat isi ditampilkan sebagai HTML mentah sehingga payload JavaSc
 
 ### Screenshot
 
-> **[MASUKKAN SCREENSHOT ESCAPE HTML DI SINI]**
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/29739bb3-d27e-45bc-afd5-59e1f4a442e7" />
 
 ### Penjelasan
 
