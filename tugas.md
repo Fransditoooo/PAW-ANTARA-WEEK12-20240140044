@@ -174,7 +174,7 @@ Komentar minimal 5 karakter.
 
 ### Screenshot
 
-> **[MASUKKAN SCREENSHOT DATA INVALID DITOLAK SERVER DI SINI]**
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4d5657da-2e52-4d4c-807a-b7a1b18f3093" />
 
 ### Kesimpulan
 
@@ -218,6 +218,11 @@ Selain sanitasi sebelum penyimpanan, output juga tetap harus di-escape ketika di
 Input tersebut tidak boleh dipercaya sebagai HTML dan tidak boleh ditampilkan sebagai HTML mentah.
 
 ---
+
+{
+  "teks": "&lt;b&gt;Fransdito&lt;&#x2F;b&gt;",
+  "email_input": ""
+}
 
 # 3. Escape Data Saat Render
 
@@ -271,7 +276,8 @@ Payload ditampilkan sebagai teks, misalnya:
 
 ### Screenshot
 
-> **[MASUKKAN SCREENSHOT XSS YANG TIDAK TEREKSEKUSI DI SINI]**
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/34209136-5947-4ba4-9038-c2557effd74f" />
+
 
 ### Penjelasan
 
@@ -329,7 +335,8 @@ Setelah halaman selesai dibuat, dilakukan pengujian menggunakan payload SQL Inje
 
 ### Screenshot
 
-> **[MASUKKAN SCREENSHOT SQL INJECTION GAGAL DI SINI]**
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4eab06a8-fac4-45f8-9171-ed2e3b057daf" />
+
 
 ### Hasil
 
@@ -351,7 +358,8 @@ Serangan gagal karena query menggunakan parameterized query. Input pengguna diki
 
 ### Screenshot
 
-> **[MASUKKAN SCREENSHOT XSS REFLECTED GAGAL DI SINI]**
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f771be82-fefa-4394-bd02-6140b614d0e4" />
+
 
 ### Hasil
 
@@ -373,7 +381,7 @@ Data pengguna di-escape ketika ditampilkan kembali ke halaman sehingga tag `<scr
 
 ### Screenshot
 
-> **[MASUKKAN SCREENSHOT XSS STORED GAGAL DI SINI]**
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e8478973-e09d-43ec-8974-4eddbbda8c01" />
 
 ### Hasil
 
@@ -395,7 +403,7 @@ Walaupun data pengguna tersimpan di database, data tersebut tetap di-escape keti
 
 ### Screenshot
 
-> **[MASUKKAN SCREENSHOT HTML INJECTION GAGAL DI SINI]**
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1925e0e9-bdde-4cbd-b723-c9fefb34c00a" />
 
 ### Hasil
 
